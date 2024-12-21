@@ -6,16 +6,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: VITE_apiKey,
-  authDomain: VITE_authDomain,
-  projectId: VITE_projectId,
-  storageBucket: VITE_storageBucket,
-  messagingSenderId: VITE_messagingSenderId,
-  appId: VITE_appId,
+  apiKey: "AIzaSyDU0gyZacEbkvsLHa5A-d4I-qxp8QIpvXQ",
+  authDomain: "restaurant-management-we-ecc54.firebaseapp.com",
+  projectId: "restaurant-management-we-ecc54",
+  storageBucket: "restaurant-management-we-ecc54.firebasestorage.app",
+  messagingSenderId: 497969795909,
+  appId: "1:497969795909:web:0fa8114223fea9e373642c"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-export default auth;
+export const app = initializeApp(firebaseConfig);

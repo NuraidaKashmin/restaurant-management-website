@@ -23,9 +23,9 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink>All Foods</NavLink></li>
-                        <li><NavLink>Food Purchased</NavLink></li>
-                        <li><NavLink>Gallery</NavLink></li>
+                        <li><NavLink to="all-foods">All Foods</NavLink></li>
+                        <li><NavLink to="food-purchased">Food Purchased</NavLink></li>
+                        <li><NavLink to="gallery">Gallery</NavLink></li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Restaurant</a>
@@ -33,13 +33,13 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink>All Foods</NavLink></li>
-                    <li><NavLink>Food Purchased</NavLink></li>
-                    <li><NavLink>Gallery</NavLink></li>
+                    <li><NavLink to="all-foods">All Foods</NavLink></li>
+                    <li><NavLink to="food-purchased">Food Purchased</NavLink></li>
+                    <li><NavLink to="gallery">Gallery</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <NavLink to="login" className="btn" >Login</NavLink>
             </div>
         </div>
     );

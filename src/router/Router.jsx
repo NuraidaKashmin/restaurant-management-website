@@ -3,6 +3,11 @@ import {
   } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import AllFoods from "../pages/AllFoods";
+import Gallery from "../pages/Gallery";
+import FoodPurchased from "../pages/FoodPurchased";
 
   const router = createBrowserRouter([
     {
@@ -13,7 +18,28 @@ import Home from "../pages/Home";
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: 'all-foods',
+            element: <AllFoods></AllFoods>
+        },
+        {
+            path: 'gallery',
+            element:<Gallery></Gallery>
+        },
+        {
+            path: 'food-purchased',
+            element: <FoodPurchased></FoodPurchased>
+        },
+        {
+            path: 'login',
+            element: <Login></Login>
+        },
+        {
+            path: 'register',
+            element: <Register></Register>
         }
+
       ]
     },
   ]);
