@@ -13,12 +13,13 @@ import AddFood from "../pages/AddFood";
 import MyOrders from "../pages/MyOrders";
 import SingleFoodPage from "../pages/SingleFoodPage";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: <h2>Route not found</h2>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
