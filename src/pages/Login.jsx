@@ -30,8 +30,8 @@ const Login = () => {
         console.log({ email, pass })
         try {
             
-            await signIn(email, pass)
-            toast.success('Signin Successful')
+            const userCredential = await signIn(email, pass)
+            toast.success('Signin Successful', userCredential)
             navigate(from, { replace: true })
         } catch (err) {
             console.log(err)
@@ -60,10 +60,12 @@ const Login = () => {
                         <div className='mt-4'>
                             <label
                                 className='block mb-2 text-base text-gray-700 '
+                                htmlFor='LoggingEmailAddress'
                             >
                                 Email
                             </label>
                             <input
+                                id='LoggingEmailAddress'
                                 name='email'
                                 className='block w-full px-4 py-2 text-gray-700 bg-white rounded-lg'
                                 type='email'
@@ -74,13 +76,14 @@ const Login = () => {
                             <div className='flex justify-between'>
                                 <label
                                     className='block mb-2 text-base text-gray-700'
-                                    
+                                    htmlFor='loggingPassword'
                                 >
                                     Password
                                 </label>
                             </div>
 
-                            <input                             
+                            <input 
+                                id='loggingPassword'                            
                                 name='password'
                                 className='block w-full px-4 py-2 text-gray-700 bg-white  rounded-lg    '
                                 type='password'
