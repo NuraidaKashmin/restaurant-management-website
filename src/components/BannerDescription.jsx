@@ -22,7 +22,7 @@ const BannerDescription = ({ image, text, textOne }) => {
                         to='/all-foods'
                         className=''
                     >
-                        <button className="btn btn-success text-white">All Foods</button>
+                        <button className="btn btn-success text-white text-lg">All Foods</button>
                     </Link>
                 </div>
             </div>
