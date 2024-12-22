@@ -7,7 +7,6 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location?.state || '/'
-    console.log(from)
     const { signIn, signInWithGoogle } = useContext(AuthContext)
 
     const handleGoogleSignIn = async () => {
@@ -81,9 +80,7 @@ const Login = () => {
                                 </label>
                             </div>
 
-                            <input
-                                
-                                
+                            <input                             
                                 name='password'
                                 className='block w-full px-4 py-2 text-gray-700 bg-white  rounded-lg    '
                                 type='password'
@@ -94,16 +91,14 @@ const Login = () => {
                                 type='submit'
                                 className='w-full px-6 py-3 text-lg font-bold text-white bg-gray-600 rounded-lg '
                             >
-                                Sign In
+                                Login
                             </button>
                         </div>
                     </form>
 
                         <div className='text-lg text-center text-black mt-6'>
                             <p>Click here to <Link to='/register' className="text-red-600 font-bold text-xl underline">Register</Link></p>
-                        </div>
-
-                    
+                        </div>                    
                 </div>
             </div>
         </div>

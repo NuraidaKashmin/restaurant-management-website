@@ -8,6 +8,9 @@ import Register from "../pages/Register";
 import AllFoods from "../pages/AllFoods";
 import Gallery from "../pages/Gallery";
 import FoodPurchased from "../pages/FoodPurchased";
+import MyFood from "../pages/MyFood";
+import AddFood from "../pages/AddFood";
+import MyOrders from "../pages/MyOrders";
 
   const router = createBrowserRouter([
     {
@@ -30,6 +33,18 @@ import FoodPurchased from "../pages/FoodPurchased";
         {
             path: 'food-purchased',
             element: <FoodPurchased></FoodPurchased>
+        },
+        {
+          path: 'my-food',
+          element: <MyFood></MyFood>
+        },
+        {
+          path: 'add-food',
+          element: <AddFood></AddFood>
+        },
+        {
+          path: 'my-orders',
+          element:<MyOrders></MyOrders>
         },
         {
             path: 'login',

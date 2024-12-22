@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -39,7 +42,64 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink to="login" className="btn" >Login</NavLink>
+                <div>
+                    {!user && (
+                        <NavLink to='login' className="btn btn-success" >Login</NavLink>
+                    )}
+                </div>
+
+                {user && (
+                    <div className='dropdown dropdown-end z-50'>
+                        <div
+                            tabIndex={0}
+                            role='button'
+                            className='btn btn-ghost btn-circle avatar'
+                        >
+                            <div title={user?.displayName} className='w-10 rounded-full'>
+                                <img
+                                    referrerPolicy='no-referrer'
+                                    alt='User Profile Photo'
+                                    src={user?.photoURL}
+                                />
+                            </div>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+                        >
+                            <li>
+                                <NavLink to='my-food'>
+                                    My Foods
+                                </NavLink>
+                            </li>
+                            <li className="mt-1">
+                                <NavLink to='add-food'>
+                                    Add food
+                                </NavLink>
+                            </li>
+                            <li className="mt-1">
+                                <NavLink to='my-orders'>
+                                    My Orders
+                                </NavLink>
+                            </li>
+                            <li className='mt-1'>
+                                <button
+                                    onClick={logOut}
+                                    className='btn btn-error'
+                                >
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+
+
+
+
+
+
+
             </div>
         </div>
     );
