@@ -85,21 +85,13 @@ const Navbar = () => {
                             <li className='mt-1'>
                                 <button
                                     onClick={logOut}
-                                    className='btn btn-error'
-                                >
+                                    className='btn btn-error'>
                                     Logout
                                 </button>
                             </li>
                         </ul>
                     </div>
                 )}
-
-
-
-
-
-
-
             </div>
         </div>
     );

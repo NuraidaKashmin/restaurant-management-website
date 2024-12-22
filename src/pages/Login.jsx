@@ -45,15 +45,14 @@ const Login = () => {
                 <div className='w-full px-6 py-8 md:px-8 lg:w-1/2'>
                     <div
                         onClick={handleGoogleSignIn}
-                        className='flex items-center justify-center mt-4 text-white rounded-lg bg-green-950'
-                    >
+                        className='cursor-pointer flex items-center justify-center mt-4 text-white rounded-lg bg-green-950'>
                         <div className='font-bold px-2 py-3'>
                             <p>Google Login</p>
                         </div>
                     </div>
                     
                         <div className='text-lg text-center text-gray-950 mt-6'>
-                            Login with email
+                            Login with Email
                         </div>
                     
                     <form onSubmit={handleSignIn}>
