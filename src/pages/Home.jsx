@@ -1,8 +1,19 @@
+import Banner from "../components/Banner";
 
 const Home = () => {
     return (
-        <div className="container mx-auto">
-            <h1>This is home</h1>
+        <div className="mx-auto">
+            <Banner></Banner>
+
+           
+            {/* errorpage */}
+            {/* footer */}
+            {/* password authentication */}
+
+
+
+
+            
         </div>
     );
 };
