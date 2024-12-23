@@ -34,7 +34,7 @@ const MyFood = () => {
     }
 
 
-    
+
 
 
 
@@ -139,7 +139,7 @@ const MyFood = () => {
                                                         </button>
 
                                                         <Link
-                                                            to={`/update/1`}
+                                                            to={`/update/${food._id}`}
                                                             className='text-gray-500 transition-colors duration-200   hover:text-yellow-500 focus:outline-none'
                                                         >
                                                             <svg
