@@ -14,6 +14,7 @@ import MyOrders from "../pages/MyOrders";
 import SingleFoodPage from "../pages/SingleFoodPage";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
+import Update from "../pages/Update";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,14 @@ const router = createBrowserRouter([
       {
         path: 'my-orders',
         element: <MyOrders></MyOrders>
+      },
+      {
+        path: '/update/:id',
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        )
       },
       {
         path: 'login',
