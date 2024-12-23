@@ -6,7 +6,7 @@ const AllFoodsCard = ({ food }) => {
     const { category, description, image, name, origin, price, quantity, _id } = food || {}
     console.log(category)
     return (
-        <Link to={`/food/${_id}`} className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl">
             <figure>
                 <img
                     src={image}
@@ -19,11 +19,11 @@ const AllFoodsCard = ({ food }) => {
                 <p>Description:{description.substring(0, 10)}...</p>
                 <p>Price{price}</p>
                 <p>Quantity:{quantity}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Details</button>
-                </div>
+                <Link to={`/food/${_id}`} className="card-actions justify-end">
+                    <button className="btn btn-primary text-lg">Details</button>
+                </Link>
             </div>
-        </Link>
+        </div>
     );
 };
 
