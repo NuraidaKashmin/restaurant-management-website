@@ -15,6 +15,7 @@ import SingleFoodPage from "../pages/SingleFoodPage";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage";
 import Update from "../pages/Update";
+import FoodDetails from "../pages/FoodDetails";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,14 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Update></Update>
           </PrivateRoute>
+        )
+      },
+      {
+        path: '/food/:id',
+        element: (
+          
+            <FoodDetails></FoodDetails>
+          
         )
       },
       {
