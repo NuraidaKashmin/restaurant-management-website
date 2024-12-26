@@ -1,8 +1,29 @@
-# React + Vite
+**Project Name**
+- Restaurant Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Purpose**
+- user-friendly for customers and staff
+- engaging experience for customers and staff
+- enhance the restaurant's online presence 
+- improve customer interaction
+- streamline internal management processes
 
-Currently, two official plugins are available:
+**Key Features**
+- 6 top-selling Food Items  depending on the number of purchases of a food item.
+- Below the 6 cards, there will be a see-all button that will redirect the user to the All Foods page.
+- The number of times the food was purchased.
+- At least 10 static images added in a gallery section.
+- Add Food Page.
+- All Foods page implement a search functionality where foods can be searched using its name.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**npm packages**
+- axios
+- firebase
+- lottie-react
+- moment
+- react-hot-toast
+- react-dom
+- swiper
+- yet-another-react-lightbox
+- daisyui
+- tailwindcss
