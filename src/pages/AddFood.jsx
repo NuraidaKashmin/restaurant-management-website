@@ -16,6 +16,7 @@ const AddFood = () => {
         price: 0,
         origin: "",
         description: "",
+        purchaseCount: 0,
     });
     console.log(formData)
 
@@ -31,6 +32,7 @@ const AddFood = () => {
         e.preventDefault();
         const foodItem = {
             ...formData,
+            purchaseCount: 0,
             addedBy: {
                 name: user.displayName,
                 email: user.email,
@@ -57,6 +59,7 @@ const AddFood = () => {
                     price: 0,
                     origin: "",
                     description: "",
+                    purchaseCount: 0,
                 });
             } else {
                 throw new Error("Failed to add food item.");

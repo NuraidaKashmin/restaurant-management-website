@@ -3,27 +3,28 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const AllFoodsCard = ({ food }) => {
     // eslint-disable-next-line react/prop-types
-    const { category, description, image, name, origin, price, quantity, _id } = food || {}
+    const { category,  image, name,  price, quantity, _id } = food || {}
     console.log(category)
     return (
-        <div className="card bg-base-100 shadow-xl">
-            <figure>
-                <img
-                    src={image}
-                    alt="" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">Name: {name}</h2>
-                <p>Category:{category}</p>
-                <p>Origin:{origin}</p>
-                <p>Description:{description.substring(0, 10)}...</p>
-                <p>Price{price}</p>
-                <p>Quantity:{quantity}</p>
-                <Link to={`/food/${_id}`} className="card-actions justify-end">
-                    <button className="btn btn-primary text-lg">Details</button>
+        <div className="card shadow-lg p-4 border rounded-md">
+            <img src={image} alt={name} className="w-full h-48 object-cover rounded-md" />
+            <div className="mt-4">
+                <h2 className="text-lg font-semibold">{name}</h2>
+                <p className="text-gray-600">Price: ${price}</p>
+                <p className={`text-sm font-medium ${quantity > 0 ? 'text-green-600' : 'text-red-600'}`}>
+                    {quantity > 0 ? `Available: ${quantity}` : 'Out of Stock'}
+                </p>
+                <Link to={`/food/${_id}`}>
+                    <button
+                        className="btn btn-primary mt-4"
+                        disabled={quantity === 0}
+                    >
+                        Details
+                    </button>
                 </Link>
             </div>
         </div>
+
     );
 };
 

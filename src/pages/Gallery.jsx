@@ -21,7 +21,7 @@ const Gallery = () => {
         { src: four, name: "Elegant Dining", description: "A fine dining experience with style.", width: 600, height: 600 },
         { src: five, name: "Vegan Bliss", description: "A fresh and healthy vegan platter.", width: 600, height: 600 },
         { src: six, name: "Savory Feast", description: "A fresh and healthy vegan platter.", width: 600, height: 600 },
-        { src: seven, name: "Vegan Bliss", description: "Description for Image 7", width: 600, height: 600 },
+        { src: seven, name: "Vegan Bliss", description: "A fresh and healthy vegan platter.", width: 600, height: 600 },
         { src: eight, name: "Savory Feast", description: "A hearty meal with all your favorites.", width: 600, height: 600 },
         { src: nine, name: "Savory Feast", description: "A hearty meal with all your favorites.", width: 600, height: 600 },
         { src: ten, name: "Vegan Bliss", description: "A fresh and healthy vegan platter." },
