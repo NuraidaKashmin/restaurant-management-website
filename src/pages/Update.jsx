@@ -16,7 +16,7 @@ const Update = () => {
 
     const fetchFoodData = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/food/${id}`);
+            const { data } = await axios.get(`https://restaurant-server-tawny.vercel.app/food/${id}`);
             setFood(data);
         } catch (err) {
             console.error("Error fetching food data:", err);
@@ -43,7 +43,7 @@ const Update = () => {
         };
 
         try {
-            const response = await fetch(`http://localhost:5000/update-food/${id}`, {
+            const response = await fetch(`https://restaurant-server-tawny.vercel.app/update-food/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

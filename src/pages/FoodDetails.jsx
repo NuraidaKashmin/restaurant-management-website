@@ -15,7 +15,7 @@ const FoodDetails = () => {
 
     const fetchFoodData = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/food/${id}`);
+            const { data } = await axios.get(`https://restaurant-server-tawny.vercel.app/food/${id}`);
             setFood(data);
             console.log("Fetched data:", data);
         } catch (err) {

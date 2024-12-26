@@ -24,7 +24,7 @@ const FoodPurchased = () => {
 
     const fetchFoodData = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/food/${id}`);
+            const { data } = await axios.get(`https://restaurant-server-tawny.vercel.app/food/${id}`);
             setFood(data);
         } catch (err) {
             console.error("Error fetching food data:", err);
@@ -60,7 +60,7 @@ const FoodPurchased = () => {
         // };
 
         // try {
-        //     const response = await axios.post(`http://localhost:5000/food-purchased/${id}`, purchaseData);
+        //     const response = await axios.post(`https://restaurant-server-tawny.vercel.app/food-purchased/${id}`, purchaseData);
 
         //     if (response.status === 200) {
         //         toast.success("Purchase successful!");
@@ -86,7 +86,7 @@ const FoodPurchased = () => {
     };
 
     try {
-        const response = await axios.post(`http://localhost:5000/food-purchased/${id}`, purchaseData);
+        const response = await axios.post(`https://restaurant-server-tawny.vercel.app/food-purchased/${id}`, purchaseData);
 
      
         if (response.status === 200) {

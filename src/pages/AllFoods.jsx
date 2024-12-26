@@ -12,7 +12,7 @@ const AllFoods = () => {
         fetchAllFoods()
     }, [])
     const fetchAllFoods = async () => {
-        const { data } = await axios.get('http://localhost:5000/all-foods')
+        const { data } = await axios.get('https://restaurant-server-tawny.vercel.app/all-foods')
         setFoods(data)
     }
     console.log(foods)

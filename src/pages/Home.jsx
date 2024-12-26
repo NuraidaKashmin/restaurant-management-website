@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const fetchTopFoods = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/top-foods');
+                const response = await axios.get('https://restaurant-server-tawny.vercel.app/top-foods');
                 setTopFoods(response.data);
             } catch (error) {
                 console.error('Error fetching top foods:', error);
@@ -36,7 +36,7 @@ const Home = () => {
         fetchAllFoods()
     }, [])
     const fetchAllFoods = async () => {
-        const { data } = await axios.get('http://localhost:5000/all-foods')
+        const { data } = await axios.get('https://restaurant-server-tawny.vercel.app/all-foods')
         setFoods(data)
     }
     return (

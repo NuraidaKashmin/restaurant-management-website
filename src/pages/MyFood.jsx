@@ -13,7 +13,7 @@ const MyFood = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user])
     const fetchAllFoods = async () => {
-        const { data } = await axios.get(`http://localhost:5000/all-foods/${user?.email}`)
+        const { data } = await axios.get(`https://restaurant-server-tawny.vercel.app/all-foods/${user?.email}`)
         setFoods(data)
     }
     console.log(foods)
@@ -22,7 +22,7 @@ const MyFood = () => {
     const handleDelete = async id=>{
         try {
             const {data} = await axios.delete(
-                `http://localhost:5000/food/${id}`
+                `https://restaurant-server-tawny.vercel.app/food/${id}`
             )
             console.log(data)
             toast.success("Food item deleted successfully!");
