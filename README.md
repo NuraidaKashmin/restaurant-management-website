@@ -27,3 +27,6 @@
 - yet-another-react-lightbox
 - daisyui
 - tailwindcss
+
+**LIVE Link**
+- https://restaurant-management-we-ecc54.web.app/
