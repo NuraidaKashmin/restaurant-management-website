@@ -16,7 +16,7 @@ const AllFoodsCard = ({ food }) => {
                 </p>
                 <Link to={`/food/${_id}`}>
                     <button
-                        className="btn btn-primary mt-4"
+                        className="btn btn-success text-white text-base mt-4"
                         disabled={quantity === 0}
                     >
                         Details

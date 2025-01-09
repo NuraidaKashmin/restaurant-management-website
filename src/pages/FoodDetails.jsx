@@ -46,7 +46,7 @@ const FoodDetails = () => {
                 <p className="text-lg mb-2">Purchase Count: {purchaseCount}</p>
                 <Link to={`/food-purchased/${id}`}>
                     <button
-                        className="btn btn-primary"
+                        className="btn btn-success text-white"
                         disabled={quantity === 0}
                     >
                         {quantity === 0 ? "Out of Stock" : "Click to Purchase"}

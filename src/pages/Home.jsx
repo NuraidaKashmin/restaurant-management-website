@@ -31,7 +31,7 @@ const Home = () => {
 
 
 
-    
+
     useEffect(() => {
         fetchAllFoods()
     }, [])
@@ -46,56 +46,28 @@ const Home = () => {
 
 
 
-            <div>
-            <h1 className="text-3xl font-bold text-center mb-8">Top Selling Foods</h1>
-            <div className="grid lg:grid-cols-3 mb-8 gap-4">
-                {topFoods.length > 0 ? (
-                    topFoods.map((food) => (
-                        <div key={food._id} className="card shadow-lg p-4 border rounded-md">
-                            <img src={food.image || '/placeholder.png'} alt={food.name} className="w-full h-48 object-cover rounded-md" />
-                            <h3 className="text-lg font-semibold">{food.name}</h3>
-                            <p className="text-gray-600">Price: ${food.price}</p>
-                            <p className="text-gray-600">Purchased: {food.purchaseCount} times</p>
-                            <Link to={`/food/${food._id}`}>
-                                <button className="btn btn-success text-white text-lg mt-6">Details</button>
-                            </Link>
-                        </div>
-                    ))
-                ) : (
-                    <p>No top foods available.</p>
-                )}
-            </div>
             <div className="grid justify-center">
-                <Link to="/all-foods">
-                    <button className="btn btn-info text-white text-lg mb-8">See All</button>
-                </Link>
-            </div>
-        </div>
-
-
-
-
-            
-            <Accordion></Accordion>
-            <div className="mx-auto w-11/12 mt-14 grid gap-6 justify-items-center">
-                <h1 className="text-xl md:text-4xl text-center font-bold dark:text-white">Hurry up! Order Now!</h1>
-                <Link to='/all-foods'><button className="btn btn-info text-lg text-white">All Foods</button></Link>
-                <Lottie animationData={Animation} loop={true} />;
-            </div>
-
-            <div>
-                <h1 className="text-3xl font-bold text-center mb-8">Explore Our Foods</h1>
-                <div className="grid lg:grid-cols-3 mb-8 gap-4">
-                    {
-                        foods.map(food => <AllFoodsCard key={food._id} food={food}></AllFoodsCard>)
-                    }
+                <h1 className="text-3xl font-bold text-center mb-8">Top Selling Foods</h1>
+                <div className="grid lg:grid-cols-4 mb-8 gap-4">
+                    {topFoods.length > 0 ? (
+                        topFoods.map((food) => (
+                            <div key={food._id} className="card shadow-lg p-4 border rounded-md">
+                                <img src={food.image || '/placeholder.png'} alt={food.name} className="w-full h-48 object-cover rounded-md" />
+                                <h3 className="text-lg font-semibold">{food.name}</h3>
+                                <p className="text-gray-600">Price: ${food.price}</p>
+                                <p className="text-gray-600">Purchased: {food.purchaseCount} times</p>
+                                <Link to={`/food/${food._id}`}>
+                                    <button className="btn btn-success text-white text-base mt-6">Details</button>
+                                </Link>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No top foods available.</p>
+                    )}
                 </div>
                 <div className="grid justify-center">
-                    <Link
-                        to='/all-foods'
-                        className=''
-                    >
-                        <button className="btn btn-success text-white text-lg mb-8">All Foods</button>
+                    <Link to="/all-foods">
+                        <button className="btn btn-success text-white text-lg mb-8">See All</button>
                     </Link>
                 </div>
             </div>
@@ -104,10 +76,33 @@ const Home = () => {
 
 
 
+            <Accordion></Accordion>
+            <div className="mx-auto w-11/12 mt-14 grid gap-6 justify-items-center">
+                <h1 className="text-xl md:text-4xl text-center font-bold dark:text-white">Hurry up! Order Now!</h1>
+                <Link to='/all-foods'><button className="btn btn-success text-lg text-white">All Foods</button></Link>
+                <div>
+                    <Lottie animationData={Animation} loop={true} />;
+                </div>
+            </div>
+
+            <div className="grid justify-center">
+                <h1 className="text-3xl font-bold text-center mb-8">Explore Our Foods</h1>
+                <div className="grid lg:grid-cols-4 mb-8 gap-4">
+                    {
+                        foods.map(food => <AllFoodsCard key={food._id} food={food}></AllFoodsCard>)
+                    }
+                </div>
+
+            </div>
 
 
 
-            
+
+
+
+
+
+
 
 
 

@@ -39,7 +39,7 @@ const MyFood = () => {
 
 
     return (
-        <div className='container px-4 mx-auto pt-12'>
+        <div className='container px-4 mx-auto pt-12 min-h-screen'>
             <div className='flex items-center gap-x-3'>
                 <h2 className='text-3xl font-medium text-gray-800 '>My Foods</h2>
 

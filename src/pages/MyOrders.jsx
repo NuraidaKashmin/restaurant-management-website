@@ -5,7 +5,7 @@ const MyOrders = () => {
 
 
   return (
-    <div className="container mx-auto my-8 p-4 bg-base-100 shadow-md rounded-lg">
+    <div className="container min-h-screen mx-auto my-8 p-4 bg-base-100 shadow-md rounded-lg">
       <figure className="flex justify-center">
         <img
           src=""
