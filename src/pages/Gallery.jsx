@@ -40,7 +40,7 @@ const Gallery = () => {
             <div className="text-white py-8 text-center" style={{ backgroundImage: `url(${bgThree})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
                 <h1 className="text-4xl font-semibold">Gallery</h1>
             </div>
-            <div className="grid grid-cols-3 gap-4 px-8 py-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-8 py-4">
                 {images.map((image, index) => (
                     <div
                         key={index}

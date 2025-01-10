@@ -73,7 +73,7 @@ const AllFoods = () => {
                         SORT BY PRICE
                     </label>
                     <button
-                        className="btn btn-active text-gray-700"
+                        className="btn btn-sm btn-active text-gray-700"
                         onClick={() =>
                             setSortOrder(sortOrder === "asc" ? "desc" : "asc")
                         }
